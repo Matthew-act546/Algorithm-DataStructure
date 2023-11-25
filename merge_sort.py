@@ -81,7 +81,7 @@ numbers = [45, 65, 78, 33, 12 , 83, 90]
 print(verify_sorted(merge_sort(numbers)))
 print(verify_sorted(numbers))
 
-number = [1, 1, 1, 3, 3, 34, 54, 56,]
+number = [1, 1, 1, 3, 3, 34, 54, 56]
 print(verify_sorted(number))
 
 ##### Idea #####
