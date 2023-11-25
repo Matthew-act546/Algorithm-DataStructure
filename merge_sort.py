@@ -67,17 +67,22 @@ def merge(left, right):
 
 def verify_sorted(list):
     n = len(list)
+    flag = False
+
     if n == 0 or n == 1:
         return True
-    
+    if list[0] == list[1]:
+        flag = True
 
-    return ((list[0] < list[1] or list[0] == list[1]) and verify_sorted(list[1:]))
+    return ((list[0] < list[1] or flag) and verify_sorted(list[1:]))
 
 numbers = [45, 65, 78, 33, 12 , 83, 90]
 
 print(verify_sorted(merge_sort(numbers)))
 print(verify_sorted(numbers))
 
+number = [1, 1, 1, 3, 3, 34, 54, 56,]
+print(verify_sorted(number))
 
 ##### Idea #####
 amount = 100
