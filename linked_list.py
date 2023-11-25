@@ -59,7 +59,7 @@ class LinkedList:
             current = self.head 
 
             while position > 1:
-                current = current.next_node #<------------------------------------------------- i think error 
+                current = current.next_node
                 position -= 1
 
             prev_node = current
