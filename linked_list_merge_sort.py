@@ -95,18 +95,17 @@ def merge(left, right):
     # Discard the fake head and set first merged node as head
     head = merged.head.next_node
     merged.head = head
-    
+
     return merged
 
+l = LinkedList()
+l.add(2)
+l.add(42)
+l.add(123)
+l.add(1023)
+l.add(150)
+l.add(120)
 
-
-def verify_sorted(linked_list):
-    n = linked_list.size()
-    flag = False
-    
-    if n == 0 or n == 1:
-        return True
-    if linked_list[0] == linked_list[1]:
-        flag =  True
-
-    return ((linked_list[0] < linked_list[1] or flag) and verify_sorted(linked_list[1:]))
+print(l)
+sorted_linked_list = merge_sort(l)
+print(sorted_linked_list)
