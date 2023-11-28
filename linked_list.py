@@ -15,9 +15,17 @@ class LinkedList:
         self.head = None
     
     def is_empty(self):
+        """
+        Checking if the list is empty
+        O(1)
+        """
         return self.head == None
     
     def size(self):
+        """
+        Checking the size of the linked list.
+        O(n)
+        """
         current = self.head
         count = 0                                                   
         while current: 
@@ -26,12 +34,21 @@ class LinkedList:
 
         return count
         
-    def add(self, data):  
+    def add(self, data):
+        """
+        Adding a new node in the linked list
+        O(1)
+        """  
         new_node = Node(data)
         new_node.next_node = self.head
         self.head = new_node
 
     def search(self, key):
+        """
+        Searching an element into a list.
+        O(n)
+        """
+
         current = self.head
 
         while current:
@@ -92,6 +109,10 @@ class LinkedList:
         return current
     
     def node_at_index(self, index):
+        """
+        Checking the index of the node.
+        O(n)
+        """
         if index == 0:
             return self.head
         else:
