@@ -89,6 +89,14 @@ def merge(left, right):
                 current.next_node = right_head
                 # move right to next node
                 right_head = right_head.next_node
+        # Move to the current to next node
+        current = current.next_node
+    
+    # Discard the fake head and set first merged node as head
+    head = merged.head.next_node
+    merged.head = head
+    
+    return merged
 
 
 
